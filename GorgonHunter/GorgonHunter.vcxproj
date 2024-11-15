@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1915abab-79d1-48e0-8b27-bc9d3d842276}</ProjectGuid>
+    <RootNamespace>GorgonHunter</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;GORGONHUNTER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;GORGONHUNTER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;GORGONHUNTER_EXPORTS;_WINDOWS;_USRDLL;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;GORGONHUNTER_EXPORTS;_WINDOWS;_USRDLL;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ChangeScore.h" />
+    <ClInclude Include="DisableAntiCheat.h" />
+    <ClInclude Include="features.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="hook.h" />
+    <ClInclude Include="imgui_hook.h" />
+    <ClInclude Include="libil2cpp\il2cpp-api-functions.h" />
+    <ClInclude Include="libil2cpp\il2cpp-api-types.h" />
+    <ClInclude Include="libil2cpp\il2cpp-api.h" />
+    <ClInclude Include="libil2cpp\il2cpp-class-internals.h" />
+    <ClInclude Include="libil2cpp\il2cpp-config-api.h" />
+    <ClInclude Include="libil2cpp\il2cpp-config.h" />
+    <ClInclude Include="libil2cpp\il2cpp-metadata.h" />
+    <ClInclude Include="libil2cpp\il2cpp-object-internals.h" />
+    <ClInclude Include="libil2cpp\il2cpp-string-types.h" />
+    <ClInclude Include="libil2cpp\il2cpp-tabledefs.h" />
+    <ClInclude Include="libil2cpp\il2cpp-vm-support.h" />
+    <ClInclude Include="libil2cpp\mono-runtime\il2cpp-callbacks.h" />
+    <ClInclude Include="libil2cpp\mono-runtime\il2cpp-mapping.h" />
+    <ClInclude Include="libil2cpp\mono-runtime\il2cpp-mono-support.h" />
+    <ClInclude Include="Mono.h" />
+    <ClInclude Include="NodeJs.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="MovementSpeed.h" />
+    <ClInclude Include="SendCommand.h" />
+    <ClInclude Include="SlashCommand.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="features.cpp" />
+    <ClCompile Include="imgui_hook.cpp" />
+    <ClCompile Include="NodeJs.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SendCommand.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="kiero\ImGui DirectX 11 Kiero Hook.vcxproj">
+      <Project>{04b17470-cb82-4724-904b-25445926ab86}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\ada\ada.vcxproj">
+      <Project>{1a3e381e-3283-147f-1c31-4a9b2cf03a83}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\base64\base64.vcxproj">
+      <Project>{3a6dfda6-1429-2530-18a4-f96883d2fc84}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\base64\base64_avx.vcxproj">
+      <Project>{f6d20dda-8695-18b6-203b-1d556203b8a4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\base64\base64_avx2.vcxproj">
+      <Project>{39b74fa7-88b9-a60d-a105-190d19546171}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\base64\base64_sse41.vcxproj">
+      <Project>{5f948fac-0612-52ed-03aa-16713965159f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\base64\base64_sse42.vcxproj">
+      <Project>{bd2f44cb-aa46-e896-f309-25b3bb88329e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\base64\base64_ssse3.vcxproj">
+      <Project>{48755411-fecd-1592-23fd-4b671fc85709}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\brotli\brotli.vcxproj">
+      <Project>{09bcf9c5-684b-ecc8-b7e0-7a4aae94015f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\cares\cares.vcxproj">
+      <Project>{8b518cd2-d37e-5fe6-9e31-e57e2d52bd1e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\googletest\gtest_prod.vcxproj">
+      <Project>{60ebf40e-41f4-ea2b-d1b4-6f02bcbbe49f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\histogram\histogram.vcxproj">
+      <Project>{77e0dc46-9a43-72c8-0258-1b1dd9c53f39}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\llhttp\llhttp.vcxproj">
+      <Project>{268de106-a88c-40e6-4bae-5c4d7a27ff58}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\nghttp2\nghttp2.vcxproj">
+      <Project>{224391d5-3dd2-3127-80b8-a4336e98a153}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\ngtcp2\nghttp3.vcxproj">
+      <Project>{8a2429a3-4c27-18fc-edc9-081a1d634870}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\ngtcp2\ngtcp2.vcxproj">
+      <Project>{1ef6fe57-6d7a-199f-aef5-9259fd4e0a71}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\openssl\openssl-cli.vcxproj">
+      <Project>{9030f01e-8c69-4af6-1b87-e7c15d2fbd85}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\openssl\openssl.vcxproj">
+      <Project>{05a80039-4dbf-82af-5128-7c411b39b238}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\simdutf\simdutf.vcxproj">
+      <Project>{221bf440-261d-8f0a-8927-e2f7d771f8c7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\uvwasi\uvwasi.vcxproj">
+      <Project>{09b030bd-adde-5cd7-438c-0ccf9803a313}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\uv\libuv.vcxproj">
+      <Project>{1d3ac6f4-96ac-8928-c578-d92305fece0b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\zlib\zlib.vcxproj">
+      <Project>{c480c625-42ff-1c0c-30df-04c81f024c23}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\zlib\zlib_adler32_simd.vcxproj">
+      <Project>{ba8bdac5-2a56-c433-e2fc-1c7cd677e24f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\zlib\zlib_crc32_simd.vcxproj">
+      <Project>{b65a9f78-2171-5159-93d1-1a56c26296ff}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\deps\zlib\zlib_inflate_chunk_simd.vcxproj">
+      <Project>{2994363b-6a31-b0cb-2305-04f3addd0055}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\icu\icudata.vcxproj">
+      <Project>{0eff0620-d50b-7f55-a548-952b82a8c571}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\icu\icui18n.vcxproj">
+      <Project>{815cbd7e-2833-b106-0ad3-78f0804a32f2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\icu\icustubdata.vcxproj">
+      <Project>{08cfb356-60b4-3b28-7977-b6ce8c1fd4dc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\icu\icuuc.vcxproj">
+      <Project>{3c6b42d2-d5d3-44c6-1449-f53e4a9aeeae}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\icu\icuucx.vcxproj">
+      <Project>{b8b24810-144b-2071-645b-175e885d6f19}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\icu\icu_implementation.vcxproj">
+      <Project>{a03d63e4-1dc1-cbcc-2158-f1e542e319aa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\icu\icu_uconfig.vcxproj">
+      <Project>{9811078d-db85-2fa6-06bd-a0fb8109f10d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\icu\icu_uconfig_target.vcxproj">
+      <Project>{c57f622f-ef24-5526-e21d-dc8a03ff09b9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\cppgc_base.vcxproj">
+      <Project>{2984facf-1514-2d3f-af0b-cb5581e3bbb1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\generate_bytecode_builtins_list.vcxproj">
+      <Project>{12cf6df0-a98a-cd4b-0e47-8ed78090224f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\run_gen-regexp-special-case.vcxproj">
+      <Project>{fe8c36fa-e3de-dbf8-0d31-079a3d7a89b8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\run_torque.vcxproj">
+      <Project>{3026bad2-57c3-86c2-bfd7-38d26063d71d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\torque_generated_definitions.vcxproj">
+      <Project>{e799205f-a6f5-e5ea-0b98-2e72e85f22e0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\torque_generated_initializers.vcxproj">
+      <Project>{fe45b9d7-12e5-4540-76e1-d0a7e100887b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\torque_runtime_support.vcxproj">
+      <Project>{6549a5d0-6c01-a362-e25e-124f413c9f02}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_base_without_compiler.vcxproj">
+      <Project>{90f611c2-5a56-668f-bdd4-477559f7c70b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_bigint.vcxproj">
+      <Project>{65290844-8df3-74d5-9f8a-dee3823e2aa3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_compiler.vcxproj">
+      <Project>{7e9f1bbb-8cd6-6940-0131-ce273de2e92b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_compiler_for_mksnapshot.vcxproj">
+      <Project>{21cf6022-c28a-6d13-7412-a2d95150f9ac}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_compiler_sources.vcxproj">
+      <Project>{f59d1cfd-d462-e5a2-b410-3a3b29961b9b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_config_headers.vcxproj">
+      <Project>{ad1cfa72-b788-5a8b-40ca-68708e4a0511}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_flags.vcxproj">
+      <Project>{6b149351-a11b-2db2-7055-316b5837a009}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_headers.vcxproj">
+      <Project>{b5dbeb0b-6224-29ce-9f8b-0cd802439400}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_heap_base.vcxproj">
+      <Project>{803806be-0ef5-3342-6e63-eb7ad61b60b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_heap_base_headers.vcxproj">
+      <Project>{5582f6d2-35bb-8e38-1440-f973838c2878}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_initializers.vcxproj">
+      <Project>{19184de0-3c8f-3fb3-3884-56ccec2e8b67}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_internal_headers.vcxproj">
+      <Project>{4382d945-8e44-5e8e-396d-7d84408dbceb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_libbase.vcxproj">
+      <Project>{9f88e7a6-714d-8e2c-a49a-d921e83f61c9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_libplatform.vcxproj">
+      <Project>{14e5dd9d-1b33-927b-b414-a333fbe25814}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_maybe_icu.vcxproj">
+      <Project>{fe4eb99b-ab28-b0aa-74d9-61795f1e0a64}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_shared_internal_headers.vcxproj">
+      <Project>{eef57fc2-83d0-10bd-dcbd-e59f6c7c44ad}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_snapshot.vcxproj">
+      <Project>{e165bf37-912c-bd21-e6d8-492a5cdadc4c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_turboshaft.vcxproj">
+      <Project>{c56d94ec-0c00-c4a1-921d-7092352ba269}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_version.vcxproj">
+      <Project>{7ce1e8c0-1c17-0df1-b8c3-7e38079c5604}</Project>
+    </ProjectReference>
+    <ProjectReference Include="nodejs\tools\v8_gypfiles\v8_zlib.vcxproj">
+      <Project>{3f3f35b6-3d96-888e-4e22-2978e7278933}</Project>
+    </ProjectReference>
+    <ProjectReference Include="traypp\tray.vcxproj">
+      <Project>{814e1d10-4b73-3a57-8790-2f61947073a4}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

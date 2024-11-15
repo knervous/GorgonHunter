@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Mono">
+      <UniqueIdentifier>{ed145da9-2537-4a40-8183-991af0eee702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{33e1972b-da80-4337-a015-e08bb7e261c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{0d96dcdb-2ca0-458d-b6d1-7f8576f526fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="il2cpp headers">
+      <UniqueIdentifier>{7cdbb9fe-6b1f-4a5f-8ec4-4026a21a6625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Nodejs">
+      <UniqueIdentifier>{bb6f5507-f521-4573-8f9a-80937ff95ea7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mono.h">
+      <Filter>Mono</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_hook.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="hook.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementSpeed.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="features.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="SlashCommand.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="DisableAntiCheat.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-api.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-api-functions.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-api-types.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\mono-runtime\il2cpp-callbacks.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-class-internals.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-config.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-config-api.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\mono-runtime\il2cpp-mapping.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-metadata.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\mono-runtime\il2cpp-mono-support.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-object-internals.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-string-types.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-tabledefs.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libil2cpp\il2cpp-vm-support.h">
+      <Filter>il2cpp headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SendCommand.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeJs.h">
+      <Filter>Features\Nodejs</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeScore.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_hook.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="features.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="SendCommand.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeJs.cpp">
+      <Filter>Features\Nodejs</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

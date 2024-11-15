@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\example\simple\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\components\button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\components\imagebutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\components\label.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\components\separator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\components\submenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\components\syncedtoggle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\components\toggle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\core\entry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\core\linux\icon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\core\linux\image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\core\linux\tray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\core\traybase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\core\windows\icon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\core\windows\image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\source\GorgonHunter\GorgonHunter\traypp\tray\src\core\windows\tray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\source\GorgonHunter\GorgonHunter\traypp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{80422A38-ED8C-3599-84E5-8DADFAF25CEE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
